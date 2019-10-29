@@ -24,7 +24,14 @@ $startKit = \preg_replace('/^namespace App;$/m', 'namespace ' . $namespace . ';'
 \file_put_contents('src/StartKit.php', $startKit);
 echo ' > done' . PHP_EOL;
 
-echo '3. composer install' . PHP_EOL;
+echo '3. replace StartKitTest.php';
+
+$startKitTest = \file_get_contents('tests/StartKitTest.php');
+$startKitTest = \preg_replace('/App(\\\StartKit)/m', $namespace . '\\StartKit', $startKitTest);
+\file_put_contents('tests/StartKitTest.php', $startKitTest);
+echo ' > done' . PHP_EOL;
+
+echo '4. composer install' . PHP_EOL;
 
 if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
     \popen('composer install', 'r');
@@ -33,4 +40,10 @@ if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
 }
 echo 'composer installed' . PHP_EOL . PHP_EOL;
 
-echo '4. enjoy TDD' . PHP_EOL;
+echo '5. enjoy TDD' . PHP_EOL;
+
+if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
+    \popen('phpunit', 'r');
+} else {
+    \shell_exec('phpunit');
+}
