@@ -7,12 +7,12 @@ Phpunit Start-Kit은 TDD 개발방법론에 따라 라이브러리를 만들기 
 ## 사용 방법 ##
 
 * 크론 혹은 ZIP 파일을 다운로드 받은 후 원하는 폴더에 복사합니다.
-* composer update를 실행합니다.
+* init.php 파일을 실행합니다.
 
 ```console
-> git clone https://github.com/cable8mm/phpunit-start-kit.git
-
-> composer update
+> git clone https://github.com/cable8mm/phpunit-start-kit.git [project_folder]
+> cd [project_folder]
+> php init.php
 ```
 
 ## 테스트 방법 ##
