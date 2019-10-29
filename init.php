@@ -7,43 +7,45 @@ if (\count($argv) == 1) {
     exit;
 }
 
+$isWindow = (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN');
+
 $namespace = $argv[1];  // eg. Cable8mm\\Library
 
-echo '1. replace composer.json';
+echo '1. replace composer.json';        $filename = 'composer.json';
 
-$composer = \json_decode(\file_get_contents('composer.json'), true);
+$composer = \json_decode(\file_get_contents($filename), true);
 unset($composer['autoload']['psr-4']);
 $composer['autoload']['psr-4'][$namespace . '\\'] = 'src/';
-\file_put_contents('composer.json', \json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+\file_put_contents($filename, \json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
 echo ' > done' . PHP_EOL;
 
-echo '2. replace StartKit.php';
+echo '2. replace StartKit.php';         $filename = 'src/StartKit.php';
 
-$startKit = \file_get_contents('src/StartKit.php');
+$startKit = \file_get_contents($filename);
 $startKit = \preg_replace('/^namespace App;$/m', 'namespace ' . $namespace . ';', $startKit);
-\file_put_contents('src/StartKit.php', $startKit);
+\file_put_contents($filename, $startKit);
 echo ' > done' . PHP_EOL;
 
-echo '3. replace StartKitTest.php';
+echo '3. replace StartKitTest.php';     $filename = 'tests/StartKitTest.php';
 
-$startKitTest = \file_get_contents('tests/StartKitTest.php');
+$startKitTest = \file_get_contents($filename);
 $startKitTest = \preg_replace('/App(\\\StartKit)/m', $namespace . '\\StartKit', $startKitTest);
-\file_put_contents('tests/StartKitTest.php', $startKitTest);
+\file_put_contents($filename, $startKitTest);
 echo ' > done' . PHP_EOL;
 
-echo '4. composer install' . PHP_EOL;
+echo '4. composer install' . PHP_EOL;   $command = 'composer install';
 
-if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
-    \popen('composer install', 'r');
+if ($isWindow) {
+    \popen($command, 'r');
 } else {
-    \shell_exec('composer install');
+    \shell_exec($command);
 }
 echo 'composer installed' . PHP_EOL . PHP_EOL;
 
-echo '5. enjoy TDD' . PHP_EOL;
+echo '5. enjoy TDD' . PHP_EOL;          $command = 'phpunit';
 
-if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
-    \popen('phpunit', 'r');
+if ($isWindow) {
+    \popen($command, 'r');
 } else {
-    \shell_exec('phpunit');
+    \shell_exec($command);
 }
