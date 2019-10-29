@@ -27,9 +27,9 @@ echo ' > done' . PHP_EOL;
 echo '3. composer install' . PHP_EOL;
 
 if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
-    $output = \popen('composer install', 'r');
+    \popen('composer install', 'r');
 } else {
-    $output = \shell_exec('composer install');
+    \shell_exec('composer install');
 }
 echo 'composer installed' . PHP_EOL . PHP_EOL;
 
