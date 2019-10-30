@@ -84,6 +84,18 @@ OK (1 test, 1 assertion)
 
 프로젝트 폴더에서 phpunit 명령어를 입력하세요.
 
+```console
+➜  phpunit-start-kit git:(master) ✗ phpunit
+PHPUnit 7.5.0 by Sebastian Bergmann and contributors.
+
+.                                                                   1 / 1 (100%)
+
+Time: 89 ms, Memory: 10.00MB
+
+OK (1 test, 1 assertion)
+➜  phpunit-start-kit git:(master) ✗
+```
+
 각종 에디터의 확장을 이용하면 더 편하게 테스트를 할 수 있습니다.
 
 ```console
