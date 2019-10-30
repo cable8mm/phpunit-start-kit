@@ -2,50 +2,81 @@
 
 namespace Cable8mm\PhpunitStartKit;
 
+/**
+ * excute shell commend include windows
+ *
+ * @param string $command
+ * @return void
+ */
+function excute_shell($command)
+{
+    if ((\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN')) {
+        \popen($command, 'r');
+
+        return;
+    }
+
+    \shell_exec($command);
+}
+
+// validate
 if (\count($argv) == 1) {
     echo "error - need argv. ex) type \"php init.php Cable8mm\\\\Library\"\n";
     exit;
 }
 
-$isWindow = (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN');
+/**
+ * namespace
+ * @example Cable8mm\\Library
+ */
+$namespace = $argv[1];
 
-$namespace = $argv[1];  // eg. Cable8mm\\Library
-
-echo '1. replace composer.json';        $filename = 'composer.json';
+// replace App to your namespace in composer.json
+echo '1. replace composer.json';
+$filename = 'composer.json';
 
 $composer = \json_decode(\file_get_contents($filename), true);
 unset($composer['autoload']['psr-4']);
 $composer['autoload']['psr-4'][$namespace . '\\'] = 'src/';
-\file_put_contents($filename, \json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+\file_put_contents(
+    $filename,
+    \json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
+);
 echo ' > done' . PHP_EOL;
 
-echo '2. replace StartKit.php';         $filename = 'src/StartKit.php';
+// replace App to your namespace in src/StartKit.php
+echo '2. replace StartKit.php';
+$filename = 'src/StartKit.php';
 
 $startKit = \file_get_contents($filename);
-$startKit = \preg_replace('/^namespace App;$/m', 'namespace ' . $namespace . ';', $startKit);
+$startKit = \preg_replace(
+    '/^namespace App;$/m',
+    'namespace ' . $namespace . ';',
+    $startKit
+);
 \file_put_contents($filename, $startKit);
 echo ' > done' . PHP_EOL;
 
-echo '3. replace StartKitTest.php';     $filename = 'tests/StartKitTest.php';
+// replace App to your namespace in tests/StartKitTest.php
+echo '3. replace StartKitTest.php';
+$filename = 'tests/StartKitTest.php';
 
 $startKitTest = \file_get_contents($filename);
-$startKitTest = \preg_replace('/App(\\\StartKit)/m', $namespace . '\\StartKit', $startKitTest);
+$startKitTest = \preg_replace(
+    '/App(\\\StartKit)/m',
+    $namespace . '\\StartKit',
+    $startKitTest
+);
 \file_put_contents($filename, $startKitTest);
 echo ' > done' . PHP_EOL;
 
-echo '4. composer install' . PHP_EOL;   $command = 'composer install';
+// composer install
+echo '4. composer install' . PHP_EOL;
 
-if ($isWindow) {
-    \popen($command, 'r');
-} else {
-    \shell_exec($command);
-}
+excute_shell('composer install');
 echo 'composer installed' . PHP_EOL . PHP_EOL;
 
-echo '5. enjoy TDD' . PHP_EOL;          $command = 'phpunit';
+// try phpunit
+echo '5. enjoy TDD' . PHP_EOL;
 
-if ($isWindow) {
-    \popen($command, 'r');
-} else {
-    \shell_exec($command);
-}
+excute_shell('phpunit');
