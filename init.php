@@ -17,6 +17,7 @@ function excute_shell($command)
     }
 
     \shell_exec($command);
+    return;
 }
 
 // validate
