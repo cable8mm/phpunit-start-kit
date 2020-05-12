@@ -11,13 +11,13 @@ Phpunit Start-Kit은 TDD 개발방법론에 따라 라이브러리를 만들기 
 
 프로젝트 폴더가 "phpunit-start-kit"이고, 네임스페이스가 "Cable8mm\\PhpunitStartKit"일 경우 아래와 같이 설치하세요.
 
-```console
+```sh
 > git clone https://github.com/cable8mm/phpunit-start-kit.git phpunit-start-kit
 > cd phpunit-start-kit
 > composer start -- Cable8mm\\PhpunitStartKit
 ```
 
-```console
+```sh
 ➜  phpunit-start-kit git:(master) ✗ php init.php Cable8mm\\Library
 1. replace composer.json > done
 2. replace StartKit.php > done
@@ -84,7 +84,7 @@ OK (1 test, 1 assertion)
 
 프로젝트 폴더에서 phpunit 명령어를 입력하세요.
 
-```console
+```sh
 ➜  phpunit-start-kit git:(master) ✗ composer test
 PHPUnit 7.5.0 by Sebastian Bergmann and contributors.
 
