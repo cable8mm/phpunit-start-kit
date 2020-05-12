@@ -1,6 +1,7 @@
 # phpunit-start-kit
 
 [![StyleCI](https://github.styleci.io/repos/198655101/shield?branch=master&style=flat)](https://github.styleci.io/repos/198655101)
+[![Build Status](https://travis-ci.org/cable8mm/phpunit-start-kit.svg?branch=master)](https://travis-ci.org/cable8mm/phpunit-start-kit)
 
 ## About
 
