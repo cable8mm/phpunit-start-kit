@@ -7,9 +7,9 @@ Phpunit Start-Kit은 TDD 개발방법론에 따라 라이브러리를 만들기 
 ## 사용 방법
 
 - git clone 혹은 ZIP 파일을 다운로드 받은 후 원하는 폴더에 복사합니다.
-- init.php 파일을 실행합니다.
+- composer start -- `namespace`
 
-프로젝트 폴더가 "phpunit-start-kit"이고, 네임스페이스가 "Cable8mm\\PhpunitStartKit"일 경우 아래와 같이 설치하세요.
+프로젝트 폴더가 `phpunit-start-kit`이고, 네임스페이스가 `Cable8mm\\PhpunitStartKit`일 경우 아래와 같이 설치하세요.
 
 ```sh
 > git clone https://github.com/cable8mm/phpunit-start-kit.git phpunit-start-kit
@@ -82,7 +82,7 @@ OK (1 test, 1 assertion)
 
 ## 테스트 방법
 
-프로젝트 폴더에서 phpunit 명령어를 입력하세요.
+프로젝트 폴더에서 `composer test` 명령어를 입력하여 `phpunit`을 실행하세요.
 
 ```sh
 ➜  phpunit-start-kit git:(master) ✗ composer test
