@@ -24,12 +24,12 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "": "src/"
-        },
         "classmap": [
             "src/"
-        ]
+        ],
+        "psr-4": {
+            "--\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -39,6 +39,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "start": [
+            "@php bin/init.php --"
+        ],
         "test": [
             "./vendor/bin/phpunit tests"
         ]
