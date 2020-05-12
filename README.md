@@ -1,5 +1,7 @@
 # phpunit-start-kit
 
+[![StyleCI](https://github.styleci.io/repos/198655101/shield?branch=master&style=flat)](https://github.styleci.io/repos/198655101)
+
 ## About
 
 Phpunit Start-Kit은 TDD 개발방법론에 따라 라이브러리를 만들기 위한 최소의 실행 코드를 제공합니다.
