@@ -71,13 +71,6 @@ $startKitTest = \preg_replace(
 \file_put_contents($filename, $startKitTest);
 echo ' > done' . PHP_EOL;
 
-// composer install
-echo '4. composer install' . PHP_EOL;
-
-excute_shell('composer install');
-echo 'composer installed' . PHP_EOL . PHP_EOL;
-
-// try phpunit
-echo '5. enjoy TDD' . PHP_EOL;
-
-excute_shell('phpunit');
+// remove init.php
+echo '4. remove install file' . PHP_EOL;
+unlink('bin/init.php');
