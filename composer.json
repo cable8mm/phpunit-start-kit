@@ -28,7 +28,7 @@
             "src/"
         ],
         "psr-4": {
-            "--\\": "src/"
+            "": "src/"
         }
     },
     "autoload-dev": {
