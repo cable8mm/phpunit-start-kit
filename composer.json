@@ -40,7 +40,8 @@
     "prefer-stable": true,
     "scripts": {
         "start": [
-            "@php bin/init.php"
+            "@php bin/init.php",
+            "composer update"
         ],
         "test": [
             "./vendor/bin/phpunit tests"
