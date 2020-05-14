@@ -17,7 +17,7 @@ Phpunit Start-Kit은 TDD 개발방법론에 따라 라이브러리를 만들기 
 ```sh
 > git clone https://github.com/cable8mm/phpunit-start-kit.git phpunit-start-kit
 > cd phpunit-start-kit
-> composer start -- Cable8mm\\PhpunitStartKit
+> composer start Cable8mm\\PhpunitStartKit
 ```
 
 ```sh
