@@ -1,7 +1,24 @@
 language: php
+
 php:
   - "7.2"
   - "7.3"
   - "7.4"
+
+matrix:
+  include:
+    - name: "Check Style"
+      php: "7.4"
+      env: RUN_CS_FIXER=true
+
 before_script: composer install
-script: composer test
+
+script:
+  - if [ "${RUN_CS_FIXER}" = "true" ]; then
+    composer require friendsofphp/php-cs-fixer &&
+    vendor/bin/php-cs-fixer fix --diff --dry-run . &&
+    vendor/bin/php-cs-fixer fix --rules=native_function_invocation --allow-risky=yes --diff src;
+    else
+    vendor/bin/phpunit;
+    fi
+  - composer test
