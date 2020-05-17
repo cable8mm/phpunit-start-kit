@@ -38,3 +38,7 @@ OK (1 test, 1 assertion)
 ```
 
 Additional it provides both `StyleCI` and `TravisCI` and `Github Action` config files(`.styleci.yml`, `.travis.yml`, `php.yml`).
+
+## License
+
+The Phpunit Start Kit is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
