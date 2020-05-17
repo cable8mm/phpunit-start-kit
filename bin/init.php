@@ -10,20 +10,19 @@ namespace Cable8mm\PhpunitStartKit;
  */
 function excute_shell($command)
 {
-    if ((\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN')) {
-        \popen($command, 'r');
+    if ((strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')) {
+        popen($command, 'r');
 
         return;
     }
 
-    \shell_exec($command);
+    shell_exec($command);
     return;
 }
 
 // validate
-if (\count($argv) == 1) {
-    echo "error - need argv. ex) type \"php init.php Cable8mm\\\\Library\"\n";
-    exit;
+if (count($argv) == 1) {
+    exit("error - need argv. ex) type \"php init.php Cable8mm\\\\Library\"\n");
 }
 
 /**
@@ -72,5 +71,9 @@ $startKitTest = \preg_replace(
 echo ' > done' . PHP_EOL;
 
 // remove init.php
-echo '4. remove install file' . PHP_EOL;
+echo '4. composer update' . PHP_EOL;
+shell_exec('composer update');
+
+// remove init.php
+echo '5. remove install file' . PHP_EOL;
 unlink('bin/init.php');
