@@ -1,8 +1,11 @@
 # Phpunit Start Kit
 
+[![Latest Stable Version](https://poser.pugx.org/cable8mm/phpunit-start-kit/v)](//packagist.org/packages/cable8mm/phpunit-start-kit)
+[![Total Downloads](https://poser.pugx.org/cable8mm/phpunit-start-kit/downloads)](//packagist.org/packages/cable8mm/phpunit-start-kit)
 [![StyleCI](https://github.styleci.io/repos/198655101/shield?branch=master)](https://github.styleci.io/repos/198655101)
 [![Build Status](https://travis-ci.org/cable8mm/phpunit-start-kit.svg?branch=master)](https://travis-ci.org/cable8mm/phpunit-start-kit)
 ![PHP Composer](https://github.com/cable8mm/phpunit-start-kit/workflows/PHP%20Composer/badge.svg)
+[![License](https://poser.pugx.org/cable8mm/phpunit-start-kit/license)](//packagist.org/packages/cable8mm/phpunit-start-kit)
 
 ## About
 
