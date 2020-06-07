@@ -57,9 +57,9 @@ $startKit = \preg_replace(
 \file_put_contents($filename, $startKit);
 echo ' > done' . PHP_EOL;
 
-// replace App to your namespace in tests/StartKitTest.php
+// replace App to your namespace in tests/unit/StartKitTest.php
 echo '3. replace StartKitTest.php';
-$filename = 'tests/StartKitTest.php';
+$filename = 'tests/unit/StartKitTest.php';
 
 $startKitTest = \file_get_contents($filename);
 $startKitTest = \preg_replace(
