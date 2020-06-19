@@ -28,12 +28,12 @@
             "src/"
         ],
         "psr-4": {
-            "": "src/"
+            "Cable8mm\\Example\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Cable8mm\\Example\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
