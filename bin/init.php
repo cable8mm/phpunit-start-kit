@@ -38,6 +38,8 @@ $filename = 'composer.json';
 $composer = \json_decode(\file_get_contents($filename), true);
 unset($composer['autoload']['psr-4']);
 $composer['autoload']['psr-4'][$namespace . '\\'] = 'src/';
+unset($composer['autoload-dev']['psr-4']);
+$composer['autoload']['psr-4'][$namespace . '\\Tests\\'] = 'tests/';
 \file_put_contents(
     $filename,
     \json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
