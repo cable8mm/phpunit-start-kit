@@ -9,6 +9,6 @@ class StartKitTest extends TestCase
     /** @test */
     public function testGetProjectVersion()
     {
-        $this->assertEquals(App\StartKit::VER, '1.23');
+        $this->assertEquals(App\StartKit::VER, '1.24');
     }
 }

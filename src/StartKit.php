@@ -6,5 +6,5 @@ namespace App;
 
 class StartKit
 {
-    const VER = '1.23';
+    public const VER = '1.24';
 }
