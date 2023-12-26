@@ -1,10 +1,10 @@
 # Phpunit Start Kit
 
-[![Latest Stable Version](https://poser.pugx.org/cable8mm/phpunit-start-kit/v)](//packagist.org/packages/cable8mm/phpunit-start-kit)
+[![PHP Linting (Pint)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/lint.yml/badge.svg)](https://github.com/cable8mm/water-melon/actions/workflows/lint.yml)
+[![Test](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/test.yml/badge.svg)](https://github.com/cable8mm/water-melon/actions/workflows/test.yml)
+[![Latest release](https://img.shields.io/github/v/release/cable8mm/phpunit-start-kit?sort=semver)](https://github.com/cable8mm/phpunit-start-kit/releases/latest)
+![GitHub License](https://img.shields.io/github/license/cable8mm/phpunit-start-kit)
 [![Total Downloads](https://poser.pugx.org/cable8mm/phpunit-start-kit/downloads)](//packagist.org/packages/cable8mm/phpunit-start-kit)
-[![StyleCI](https://github.styleci.io/repos/198655101/shield?branch=master)](https://github.styleci.io/repos/198655101)
-[![Build](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/php.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/php.yml)
-[![License](https://poser.pugx.org/cable8mm/phpunit-start-kit/license)](//packagist.org/packages/cable8mm/phpunit-start-kit)
 
 ## About
 
@@ -18,25 +18,23 @@ Install:
 
 ```sh
 composer create-project cable8mm/phpunit-start-kit project-name
+
 cd project-name
+
 composer start Cable8mm\\PhpunitStartKit
 ```
 
-Test:
+## Coding Style
 
 ```sh
-➜  phpunit-start-kit git:(master) ✗ composer test
-PHPUnit 7.5.0 by Sebastian Bergmann and contributors.
-
-.                                                                   1 / 1 (100%)
-
-Time: 89 ms, Memory: 10.00MB
-
-OK (1 test, 1 assertion)
-➜  phpunit-start-kit git:(master) ✗
+composer lint
 ```
 
-Additional it provides both `StyleCI` and `TravisCI` and `Github Action` config files(`.styleci.yml`, `.travis.yml`, `php.yml`).
+## Test
+
+```sh
+composer test
+```
 
 ## License
 
