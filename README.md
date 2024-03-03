@@ -1,30 +1,28 @@
-# Phpunit Start Kit
+This serves as a template for creating a new library.
 
-[![PHP Linting (Pint)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/lint.yml/badge.svg)](https://github.com/cable8mm/water-melon/actions/workflows/lint.yml)
-[![Test](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/test.yml/badge.svg)](https://github.com/cable8mm/water-melon/actions/workflows/test.yml)
-[![Latest release](https://img.shields.io/github/v/release/cable8mm/phpunit-start-kit?sort=semver)](https://github.com/cable8mm/phpunit-start-kit/releases/latest)
-![GitHub License](https://img.shields.io/github/license/cable8mm/phpunit-start-kit)
-[![Total Downloads](https://poser.pugx.org/cable8mm/phpunit-start-kit/downloads)](//packagist.org/packages/cable8mm/phpunit-start-kit)
+## Features
 
-## About
+- [x] Built-in PHPUnit and lint libraries
+- [x] Pre-configured GitHub Actions
+- [x] Pre-configured `composer.json` and `phpunit.xml` files as part of the skeleton
+- [x] Built-in CHANGELOG.md file and automatic commit action
+- [x] Built-in MIT License document
 
-Phpunit Start Kit is a PHP-TDD-Skeleton for library like Sympony Components.
+## Install
+
+```sh
+composer require cable8mm/phpunit-start-kit
+```
 
 ## Usage
 
-If your namespace is `Cable8mm\PhpunitStartKit`,
-
-Install:
-
 ```sh
-composer create-project cable8mm/phpunit-start-kit project-name
-
-cd project-name
-
-composer start Cable8mm\\PhpunitStartKit
+composer create-project cable8mm/phpunit-start-kit <package_name>
 ```
 
-## Coding Style
+You can customize `src/StartKit.php` and `tests/StartKitTest.php`, and modify `composer.json` to tailor it to your package name and author information.
+
+## Formatting
 
 ```sh
 composer lint

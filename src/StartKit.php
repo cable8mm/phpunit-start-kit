@@ -1,10 +1,7 @@
 <?php
 
-declare(strict_types=1);
-
-namespace App;
+namespace Cable8mm\PhpunitStartKit;
 
 class StartKit
 {
-    public const VER = '1.24';
 }
