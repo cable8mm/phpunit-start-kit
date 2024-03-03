@@ -1,4 +1,4 @@
-This is a template to create new library.
+This serves as a template for creating a new library.
 
 ## Install
 
@@ -11,6 +11,8 @@ composer require cable8mm/phpunit-start-kit
 ```sh
 composer create-project cable8mm/phpunit-start-kit <package_name>
 ```
+
+You can customize `src/StartKit.php` and `tests/StartKitTest.php`, and modify `composer.json` to tailor it to your package name and author information.
 
 ## Formatting
 
