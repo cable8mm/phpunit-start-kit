@@ -2,7 +2,7 @@
 [![Tests](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/tests.yml)
 [![update changelog](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/update-changelog.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/update-changelog.yml)
 ![GitHub Release](https://img.shields.io/github/v/release/cable8mm/phpunit-start-kit?logo=packagist&color=F28D1A)
-[![Total Downloads](http://poser.pugx.org/cable8mm/phpunit-start-kit/downloads)](https://packagist.org/packages/cable8mm/phpunit-start-kit)
+![Packagist Downloads](https://img.shields.io/packagist/dt/cable8mm/phpunit-start-kit?logo=packagist&color=F28D1A)
 ![minimum PHP version](https://img.shields.io/badge/php-%3E%3D_8.0-8892BF.svg?logo=php)
 ![GitHub License](https://img.shields.io/github/license/cable8mm/phpunit-start-kit)
 
