@@ -186,3 +186,7 @@ $RECYCLE.BIN/
 /build/
 
 # End of https://www.gitignore.io/api/git,macos,windows,composer,phpstorm,visualstudiocode
+
+# Doctum
+/cache
+# /doctum.php
