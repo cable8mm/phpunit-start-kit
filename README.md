@@ -1,10 +1,12 @@
-[![PHP Linting (Pint)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/coding-style-php.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/coding-style-php.yml)
-[![Tests](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/tests.yml)
-[![update changelog](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/update-changelog.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/update-changelog.yml)
-![GitHub Release](https://img.shields.io/github/v/release/cable8mm/phpunit-start-kit?logo=packagist&color=F28D1A)
-![Packagist Downloads](https://img.shields.io/packagist/dt/cable8mm/phpunit-start-kit?logo=packagist&color=F28D1A)
-![minimum PHP version](https://img.shields.io/badge/php-%3E%3D_8.0-8892BF.svg?logo=php)
-![GitHub License](https://img.shields.io/github/license/cable8mm/phpunit-start-kit)
+# PHPUNIT Start Kit
+
+[![code-style](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/code-style.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/code-style.yml)
+[![run-tests](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/run-tests.yml/badge.svg)](https://github.com/cable8mm/phpunit-start-kit/actions/workflows/run-tests.yml)
+![Packagist Version](https://img.shields.io/packagist/v/cable8mm/phpunit-start-kit)
+![Packagist Downloads](https://img.shields.io/packagist/dt/cable8mm/phpunit-start-kit)
+![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/cable8mm/phpunit-start-kit/php)
+![Packagist Stars](https://img.shields.io/packagist/stars/cable8mm/phpunit-start-kit)
+![Packagist License](https://img.shields.io/packagist/l/cable8mm/phpunit-start-kit)
 
 This serves as a template for creating a new library.
 
