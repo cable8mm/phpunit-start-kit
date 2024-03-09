@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.1.0 - 2024-03-09
+
+### What's Changed
+
+* Organizing various document wordings by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/phpunit-start-kit/pull/6
+
+**Full Changelog**: https://github.com/cable8mm/phpunit-start-kit/compare/v2.0.0...v2.1.0
+
 ## v2.0.0 - 2024-03-03
 
 ### What's Changed
