@@ -11,16 +11,16 @@ A starter kit for creating PHP libraries with PHPUnit testing and modern develop
 
 ## Requirements
 
-- PHP 8.2 or higher
+- PHP 8.3 or higher
 - Composer 2.0 or higher
 
 ## Features
 
-- ✅ **PHPUnit Testing**: Pre-configured PHPUnit 9/10/11 support with example tests
+- ✅ **Pest Testing**: Pre-configured Pest 4.x support with example tests
 - ✅ **Code Linting**: Laravel Pint for automatic code style enforcement
 - ✅ **CI/CD Ready**: GitHub Actions workflows for testing and code style
 - ✅ **Auto CHANGELOG**: Automatic changelog updates on GitHub releases
-- ✅ **Modern PHP**: PHP 8.0+ with strict types and PSR-4 autoloading
+- ✅ **Modern PHP**: PHP 8.3+ with strict types and PSR-4 autoloading
 - ✅ **EditorConfig**: Consistent coding styles across editors
 - ✅ **Complete Documentation**: README, CHANGELOG, and MIT License included
 
@@ -106,14 +106,14 @@ This starter kit includes three pre-configured GitHub Actions:
 
 ## Testing
 
-The kit includes example tests using PHPUnit 11's modern attributes:
+The kit includes example tests using Pest's elegant syntax:
 
 ```php
-#[Test]
-public function it_can_be_instantiated(): void
-{
-    $this->assertInstanceOf(StartKit::class, $this->startKit);
-}
+test('it can be instantiated', function () {
+    $startKit = new StartKit;
+
+    expect($startKit)->toBeInstanceOf(StartKit::class);
+});
 ```
 
 ## Code Style

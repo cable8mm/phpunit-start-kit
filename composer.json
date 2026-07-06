@@ -3,10 +3,10 @@
   "description": "Phpunit Start Kit is the simple code for starting TDD",
   "type": "library",
   "require": {
-    "php": "^8.2"
+    "php": "^8.3"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.0|^10.0|^11.0",
+    "pestphp/pest": "^4.0",
     "laravel/pint": "^1.0"
   },
   "license": "MIT",
@@ -29,9 +29,14 @@
   "minimum-stability": "stable",
   "prefer-stable": true,
   "scripts": {
-    "test": "./vendor/bin/phpunit tests",
+    "test": "./vendor/bin/pest",
     "lint": "./vendor/bin/pint",
     "inspect": "./vendor/bin/pint --test",
     "apidoc": "doctum.phar update doctum.php --output-format=github --no-ansi --no-progress"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }
