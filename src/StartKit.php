@@ -2,6 +2,4 @@
 
 namespace Cable8mm\PhpunitStartKit;
 
-class StartKit
-{
-}
+class StartKit {}
