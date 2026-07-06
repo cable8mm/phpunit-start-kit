@@ -1,5 +1,13 @@
 # Release Notes
 
+## v3.0.0 - 2026-07-06
+
+### What's Changed
+
+* feat: improvements by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/phpunit-start-kit/pull/7
+
+**Full Changelog**: https://github.com/cable8mm/phpunit-start-kit/compare/v2.1.0...v3.0.0
+
 ## v2.1.0 - 2024-03-09
 
 ### What's Changed
