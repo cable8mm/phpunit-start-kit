@@ -1,0 +1,6 @@
+{
+  "plugins": ["Pest\\Plugins\\Arch"],
+  "coverage": {
+    "enabled": true
+  }
+}

@@ -1,13 +1,17 @@
 <?php
 
-namespace Cable8mm\PhpunitStartKit\Tests;
+use Cable8mm\PhpunitStartKit\StartKit;
 
-use PHPUnit\Framework\TestCase;
+test('it can be instantiated', function () {
+    $startKit = new StartKit;
 
-final class StartKitTest extends TestCase
-{
-    public function test_start_kit_test_exist()
-    {
-        $this->assertTrue(true);
-    }
-}
+    expect($startKit)->toBeInstanceOf(StartKit::class);
+});
+
+test('example method returns expected string', function () {
+    $startKit = new StartKit;
+    $result = $startKit->example();
+
+    expect($result)->toBeString()
+        ->toBe('Hello, PHPUnit Start Kit!');
+});

@@ -185,6 +185,13 @@ $RECYCLE.BIN/
 # Build data
 /build/
 
+### Pest ###
+# Covers Pest
+# Reference: https://pestphp.com/
+
+# Generated files
+.pest.cache
+
 # End of https://www.gitignore.io/api/git,macos,windows,composer,phpstorm,visualstudiocode
 
 # Doctum
