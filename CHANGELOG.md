@@ -1,5 +1,13 @@
 # Release Notes
 
+## v3.0.1 - 2026-10-24
+
+### What's Changed
+
+* Improve starter kit workflow and docs by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/phpunit-start-kit/pull/8
+
+**Full Changelog**: https://github.com/cable8mm/phpunit-start-kit/compare/v3.0.0...v3.0.1
+
 ## v3.0.0 - 2026-07-06
 
 ### What's Changed
