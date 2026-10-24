@@ -11,7 +11,7 @@ A starter kit for creating PHP libraries with PHPUnit testing and modern develop
 
 ## Requirements
 
-- PHP 8.3 or higher
+- PHP 8.3 or higher (the CI matrix currently covers PHP 8.3, 8.4, and 8.5)
 - Composer 2.0 or higher
 
 ## Features
@@ -35,7 +35,11 @@ composer create-project cable8mm/phpunit-start-kit <package_name>
 cd <package_name>
 ```
 
-### As a Dependency
+### As a Dependency (example library only)
+
+This package is primarily a project template. Its `StartKit` class is a
+placeholder example, so installing it as a dependency is only useful if you
+specifically want to use that example class.
 
 ```sh
 composer require cable8mm/phpunit-start-kit
@@ -47,18 +51,25 @@ composer require cable8mm/phpunit-start-kit
    - Change `name` to your package name (e.g., `your-vendor/your-package`)
    - Update `authors` information
    - Add your package dependencies
+2. **Update the package namespace** in `composer.json` and your PHP files.
+   Keep the PSR-4 namespace and `src/` directory mapping in sync, then run:
 
-2. **Customize the source code**:
+   ```sh
+   composer dump-autoload
+   ```
+
+3. **Customize the source code**:
    - Modify `src/StartKit.php` with your implementation
    - Update namespace to match your package
 
-3. **Write tests**:
+4. **Write tests**:
    - Update `tests/StartKitTest.php` with your test cases
    - Add more test files as needed
 
-4. **Update documentation**:
+5. **Update documentation**:
    - Edit `README.md` with your project description
    - Update `CHANGELOG.md` with your release notes
+   - Remove or replace the starter-kit badges and repository links
 
 ## Available Commands
 
@@ -100,13 +111,15 @@ composer apidoc
 
 This starter kit includes three pre-configured GitHub Actions:
 
-1. **run-tests.yml**: Runs tests on multiple PHP versions (8.2, 8.3, 8.4, 8.5)
-2. **code-style.yml**: Automatically fixes code style with Laravel Pint
-3. **update-changelog.yml**: Updates CHANGELOG.md when a new release is published
+1. **run-tests.yml**: Runs tests on PHP 8.3, 8.4, and 8.5
+2. **code-style.yml**: Checks code style with Laravel Pint and fails when files need formatting. Run `composer lint` locally to apply fixes.
+3. **update-changelog.yml**: Updates `CHANGELOG.md` when a GitHub release is published, then commits the generated entry to the release target branch
 
 ## Testing
 
-The kit includes example tests using Pest's elegant syntax:
+The kit includes a small Pest example in `tests/StartKitTest.php`. Replace it
+with tests for your package. The empty Feature and Unit placeholder tests are
+intentionally omitted; add those directories when your project needs them.
 
 ```php
 test('it can be instantiated', function () {
@@ -118,7 +131,7 @@ test('it can be instantiated', function () {
 
 ## Code Style
 
-This project uses [Laravel Pint](https://laravel.com/docs/pint) for code styling, which follows PSR-12 standards with Laravel conventions.
+This project uses [Laravel Pint](https://laravel.com/docs/pint) for code styling. Run `composer inspect` to check formatting and `composer lint` to apply fixes.
 
 ## Contributing
 

@@ -12,16 +12,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
-        with:
-          fetch-depth: 2
 
-      - name: "laravel-pint"
-        uses: aglipanci/laravel-pint-action@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          preset: laravel
+          php-version: '8.3'
+          coverage: none
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: Linting
-          skip_fetch: true
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Check code style
+        run: composer inspect
